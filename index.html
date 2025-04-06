@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FitApp - Mobile App HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<style>
+.hero-header {
+  background-image: url('img/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 640px;
+}
+
+.hero-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* semi-transparent black overlay */
+  z-index: 1;
+}
+
+.hero-header > .container {
+  position: relative;
+  z-index: 2;
+}
+</style>
+
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                 <!--   <h1 class="m-0">FitApp</h1>   -->
+                     <img src="img/logo.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">Products</a>
+                        <a href="#review" class="nav-item nav-link">Review</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl hero-header" style="position: relative;">
+                <div class="container px-lg-5">
+                    <div class="row g-5">
+                        <div class="col-lg-8 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated slideInDown">what <b>DNHEALTHCARE</b> offers and why choose us?????</h1>
+                            <p class="text-white pb-3 animated slideInDown">DN Healthcare offers a premium range of high-performance nutritional supplements designed to fuel your fitness journey. From advanced whey proteins and mass gainers to BCAAs, EAAs, pre-workouts, and wellness capsules — every product is crafted with potent natural ingredients, scientifically backed formulations, and athlete-approved results. Whether you're looking to build muscle, boost energy, or improve overall wellness, DN Healthcare delivers clean, effective, and powerful nutrition that helps you push harder, recover faster, and achieve more.
+
+Fuel your strength. Nourish your goals. Choose DN Healthcare.</p>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+     <!-- About Start -->
+<div class="container-xxl py-5" id="about">
+  <div class="container py-5 px-lg-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+        <h2 class="text-center mb-4">Shop Products</h2>
+        <div class="row g-4 justify-content-center">
+
+          <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/BCAA.png" alt="BCAA – Muscle Recovery" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">BCAA – Muscle Recovery</h6>
+        <p class="text-muted small">3000mg Leucine, 1500mg Isoleucine, 1500mg Valine – Insurance for your muscles with a tangy boost.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹999</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('BCAA – Muscle Recovery')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/CORE WEIGHT GAINER CHOCOLATE.png" alt="Core Weight Gainer – Chocolate" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">Core Weight Gainer – Chocolate</h6>
+        <p class="text-muted small">Premium formula for lean muscle mass & weight gain. Chocolate Fantasy flavor with herbs.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹2,499</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('Core Weight Gainer – Chocolate')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/COREA LEAN MASS GAINER.png" alt="Core Lean Mass Gainer – Butterscotch" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">Core Lean Mass Gainer – Butterscotch</h6>
+        <p class="text-muted small">Herbal-based lean mass gainer with 18g protein, 3g creatine and delicious butterscotch flavor.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹2,499</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('Core Lean Mass Gainer – Butterscotch')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/CREATINE.png" alt="Creatine Monohydrate 3000mg" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">Creatine Monohydrate 3000mg</h6>
+        <p class="text-muted small">100% Pure & Micronized Creatine. Supports muscle power, size, and high-intensity training.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹749</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('Creatine Monohydrate 3000mg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/EAA.png" alt="EAA – Essential Amino Acids" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">EAA – Essential Amino Acids</h6>
+        <p class="text-muted small">Guava flavored amino acid support for muscle endurance, hydration, and recovery.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹999</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('EAA – Essential Amino Acids')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/EXTREME PREWORKOUT.png" alt="Extreme Pre Workout – Orange Blaze" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">Extreme Pre Workout – Orange Blaze</h6>
+        <p class="text-muted small">Beta-Alanine, L-Arginine AKG, Taurine & Citrulline for maximum focus and pump.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹1,199</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('Extreme Pre Workout – Orange Blaze')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/GLUTAMINE.png" alt="Glutamine 5000mg" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">Glutamine 5000mg</h6>
+        <p class="text-muted small">L-Glutamine for improved endurance, muscle repair and recovery. Tasty lychee flavor.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹849</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('Glutamine 5000mg')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/L-ARGININE.png" alt="L-Arginine + Citrulline" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">L-Arginine + Citrulline</h6>
+        <p class="text-muted small">1000mg advanced formula. Improves blood flow, vascularity and muscle pump.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹999</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('L-Arginine + Citrulline')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/LIVER DETOX.jpeg" alt="Liver Detox – Milk Thistle" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">Liver Detox – Milk Thistle</h6>
+        <p class="text-muted small">Natural detoxifier with herbal extract to promote healthy liver function.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹899</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('Liver Detox – Milk Thistle')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/MULTIVITAMIN.jpeg" alt="Multivitamin + Antioxidants" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">Multivitamin + Antioxidants</h6>
+        <p class="text-muted small">Boosts immunity, reduces stress, promotes energy, hair & skin health.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹799</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('Multivitamin + Antioxidants')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+	
+	
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/NITRA FUEL CHOCOLATE.png" alt="Nitra Fuel Whey Protein – Chocolate" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">Nitra Fuel Whey Protein – Chocolate</h6>
+        <p class="text-muted small">30g Protein | 3.74g BCAA | 2.94g Glutamine | Chocolate flavor with 3000mg Creatine Monohydrate.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹2,499</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('Nitra Fuel Whey Protein – Chocolate')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="bg-light p-4 text-center rounded product-card h-100 d-flex flex-column justify-content-between">
+        <img src="img/NITRA FUEL KESAR KULFI.png" alt="Nitra Fuel Whey Protein – Kesar Pista Kulfi" class="img-fluid mb-3" style="height: 240px; object-fit: contain;">
+        <h6 class="text-truncate mb-1" style="white-space: nowrap; font-size: 1rem;">Nitra Fuel Whey Protein – Kesar Pista Kulfi</h6>
+        <p class="text-muted small">Delicious Kesar Kulfi flavor with 30g Protein, 3.74g BCAA & digestive enzymes for advanced performance.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong class="text-primary">₹2,499</strong>
+          <button class="btn btn-sm btn-success" onclick="addToCart('Nitra Fuel Whey Protein – Kesar Pista Kulfi')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About End -->
+
+
+        
+
+    
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5" id="review">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Testimonial</h5>
+                    <h1 class="mb-5">What Say Our Clients!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-1.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-2.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-3.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-4.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Contact Start -->
+        <div class="container-xxl py-5" id="contact">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Contact Us</h5>
+                    <h1 class="mb-5">Get In Touch!</h1>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="wow fadeInUp" data-wow-delay="0.3s">
+                            <p class="text-center mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-primary-gradient rounded-pill py-3 px-5" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Address</h4>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Quick Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Newsletter</h4>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+     <!--   <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a> -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+<!-- Floating Cart Button -->
+<button id="cart-button" onclick="toggleCartDrawer()">
+  🛒 Cart <span id="cart-count">0</span>
+</button>
+
+<!-- Cart Drawer -->
+<div id="cart-drawer">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+  <h3 style="margin: 0;">Your Cart</h3>
+  <button onclick="toggleCartDrawer()" class="btn-close-cart">&times;</button>
+</div>
+  <div id="cart-items"></div>
+  <button onclick="proceedToWhatsApp()">Proceed to WhatsApp</button>
+</div>
+
+
+<!-- Styles for Cart -->
+<style>
+ #cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+#cart-button:hover {
+  background: linear-gradient(135deg, #218838, #1e7e34);
+}
+
+#cart-count {
+  background: #dc3545;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 12px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-weight: bold;
+}
+
+#cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 320px;
+  height: 100%;
+  background: #fff;
+  border-left: 2px solid #dee2e6;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 1050;
+  font-family: 'Jost', sans-serif;
+}
+
+#cart-drawer.open {
+  right: 0;
+}
+
+#cart-drawer h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #343a40;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 10px;
+}
+
+#cart-items > div {
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+#cart-items b {
+  font-size: 16px;
+  color: #212529;
+}
+
+#cart-items button {
+  margin: 5px 4px 0 0;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#cart-items button:hover {
+  background-color: #e2e6ea;
+}
+
+#cart-drawer button:last-child {
+  width: 100%;
+  background: linear-gradient(to right, #28a745, #218838);
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: background 0.3s;
+}
+
+#cart-drawer button:last-child:hover {
+  background: linear-gradient(to right, #218838, #1e7e34);
+}
+
+.btn-close-cart {
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.btn-close-cart:hover {
+  color: #dc3545;
+}
+
+
+</style>
+
+<!-- Cart Logic -->
+<script>
+let cart = [];
+
+function addToCart(productName) {
+  const existing = cart.find(p => p.name === productName);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ name: productName, quantity: 1 });
+  }
+  updateCartDisplay();
+}
+
+function removeFromCart(productName) {
+  cart = cart.filter(p => p.name !== productName);
+  updateCartDisplay();
+}
+
+function updateQuantity(productName, delta) {
+  const item = cart.find(p => p.name === productName);
+  if (item) {
+    item.quantity += delta;
+    if (item.quantity <= 0) {
+      removeFromCart(productName);
+    } else {
+      updateCartDisplay();
+    }
+  }
+}
+
+function updateCartDisplay() {
+  const cartList = document.getElementById("cart-items");
+  const cartCount = document.getElementById("cart-count");
+  cartList.innerHTML = "";
+  cartCount.innerText = cart.reduce((sum, p) => sum + p.quantity, 0);
+
+  cart.forEach(item => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <b>${item.name}</b> (x${item.quantity})
+      <button onclick="updateQuantity('${item.name}', 1)">+</button>
+      <button onclick="updateQuantity('${item.name}', -1)">-</button>
+      <button onclick="removeFromCart('${item.name}')">Remove</button>
+      <hr/>
+    `;
+    cartList.appendChild(div);
+  });
+}
+
+function proceedToWhatsApp() {
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+
+  let message = "Hello! I'm interested in the following products:%0A%0A";
+  cart.forEach(item => {
+    message += `• ${item.name} (x${item.quantity})%0A`;
+  });
+
+  const phoneNumber = "918899836172"; // Replace with your WhatsApp number
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(whatsappUrl, '_blank');
+}
+
+function toggleCartDrawer() {
+  const drawer = document.getElementById("cart-drawer");
+  drawer.classList.toggle("open");
+}
+</script>
+
+</body>
+
+</html>
