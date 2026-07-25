@@ -39,12 +39,16 @@
 <style>
 .hero-header {
   background-image: url('img/background1.png');
-  background-size: contain;
-  background-position: top center;
+  background-size: cover; /* Waapis 'cover' use karein agar puri width cover karni hai */
+  background-position: top center; /* Head ko dikhate hue align karein */
   background-repeat: no-repeat;
-  height: 640px;
+  
+  /* Fixed height ko remove karein, instead use min-height and padding */
+  height: auto; /* Height ko image content par dependency chor dein */
+  min-height: 640px; /* Minimal height set karein taaki content gap na bane */
+  padding-top: 200px; /* Neeche content ko space de, adjustments zaruri ho sakti hain */
+  padding-bottom: 50px;
 }
-
 .hero-header::before {
   content: "";
   position: absolute;
