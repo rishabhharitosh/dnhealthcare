@@ -28,18 +28,55 @@ function updateQuantity(productName, delta) {
   }
 }
 
+// Builds cart rows using safe DOM APIs (textContent) instead of innerHTML
+// string-concatenation, so product data can never be interpreted as HTML/JS.
 function updateCartDisplay() {
   const cartList = document.getElementById("cart-items");
+  if (!cartList) return;
   cartList.innerHTML = "";
+
+  if (cart.length === 0) {
+    const empty = document.createElement("div");
+    empty.className = "text-muted small py-2";
+    empty.textContent = "Your cart is empty.";
+    cartList.appendChild(empty);
+    return;
+  }
+
   cart.forEach(item => {
-    const div = document.createElement("div");
-    div.innerHTML = `
-      ${item.name} (x${item.quantity})
-      <button onclick="updateQuantity('${item.name}', 1)">+</button>
-      <button onclick="updateQuantity('${item.name}', -1)">-</button>
-      <button onclick="removeFromCart('${item.name}')">Remove</button>
-    `;
-    cartList.appendChild(div);
+    const row = document.createElement("div");
+    row.className = "d-flex align-items-center justify-content-between border-bottom py-2";
+
+    const label = document.createElement("span");
+    label.textContent = `${item.name} (x${item.quantity})`;
+    row.appendChild(label);
+
+    const btnGroup = document.createElement("span");
+
+    const plusBtn = document.createElement("button");
+    plusBtn.type = "button";
+    plusBtn.className = "btn btn-sm btn-outline-secondary mx-1";
+    plusBtn.textContent = "+";
+    plusBtn.addEventListener("click", () => updateQuantity(item.name, 1));
+
+    const minusBtn = document.createElement("button");
+    minusBtn.type = "button";
+    minusBtn.className = "btn btn-sm btn-outline-secondary mx-1";
+    minusBtn.textContent = "-";
+    minusBtn.addEventListener("click", () => updateQuantity(item.name, -1));
+
+    const removeBtn = document.createElement("button");
+    removeBtn.type = "button";
+    removeBtn.className = "btn btn-sm btn-outline-danger mx-1";
+    removeBtn.textContent = "Remove";
+    removeBtn.addEventListener("click", () => removeFromCart(item.name));
+
+    btnGroup.appendChild(plusBtn);
+    btnGroup.appendChild(minusBtn);
+    btnGroup.appendChild(removeBtn);
+    row.appendChild(btnGroup);
+
+    cartList.appendChild(row);
   });
 }
 
@@ -49,12 +86,18 @@ function proceedToWhatsApp() {
     return;
   }
 
-  let message = "Hello! I'm interested in the following products:%0A%0A";
+  let message = "Hello! I'm interested in the following products:\n\n";
   cart.forEach(item => {
-    message += `• ${item.name} (x${item.quantity})%0A`;
+    message += `• ${item.name} (x${item.quantity})\n`;
   });
 
-  const phoneNumber = "919876543210"; // Replace with your WhatsApp number
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-  window.open(whatsappUrl, '_blank');
+  // Official DN Healthcare contact number (kept in sync with the footer).
+  const phoneNumber = "918810688741";
+  // encodeURIComponent safely escapes the whole message (including
+  // characters like & # + which would otherwise corrupt the URL).
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  // noopener prevents the newly opened tab from getting a handle back to
+  // this page via window.opener.
+  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 }
