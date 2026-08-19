@@ -1,9 +1,258 @@
 /********** Template CSS **********/
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 :root {
-    --primary: #4294E3;
-    --secondary: #8F12FD;
-    --light: #F0F6FF;
-    --dark: #262B47;
+    --primary: #0D6092;
+    --secondary: #5FA346;
+    --light: #F2F9F5;
+    --dark: #14232E;
+}
+
+/*** DN Healthcare — Redesign additions ***/
+.section-eyebrow {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.section-title-lg {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--dark);
+}
+
+@media (max-width: 767.98px) {
+    .section-title-lg { font-size: 1.85rem; }
+}
+
+/* Big full-bleed hero */
+.hero-banner-v2 {
+    position: relative;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.hero-banner-v2 .hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    z-index: -1;
+}
+
+.hero-banner-v2 .hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slide-dots {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.hero-slide-dots .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.4);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero-slide-dots .dot.active {
+    background: var(--secondary);
+    width: 24px;
+    border-radius: 5px;
+}
+
+.hero-banner-v2 .eyebrow-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 30px;
+    background: rgba(95, 163, 70, .18);
+    border: 1px solid rgba(95, 163, 70, .55);
+    color: #A9E08C;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.hero-banner-v2 h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fff;
+}
+
+@media (max-width: 767.98px) {
+    .hero-banner-v2 { min-height: 520px; }
+    .hero-banner-v2 h1 { font-size: 2.1rem; }
+}
+
+.hero-banner-v2 p.lead {
+    color: rgba(255, 255, 255, .88);
+    font-size: 1.08rem;
+    max-width: 560px;
+}
+
+.hero-cta .btn {
+    padding: 13px 32px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    border-radius: 4px;
+}
+
+.hero-cta .btn-brand {
+    background: var(--secondary);
+    border: 2px solid var(--secondary);
+    color: #fff;
+}
+
+.hero-cta .btn-brand:hover {
+    background: #4d8a38;
+    border-color: #4d8a38;
+    color: #fff;
+}
+
+.hero-cta .btn-outline-brand {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .7);
+    color: #fff;
+}
+
+.hero-cta .btn-outline-brand:hover {
+    background: #fff;
+    color: var(--dark);
+    border-color: #fff;
+}
+
+/* Shop by goal category strip */
+.category-nav-wrap {
+    background: var(--dark);
+    padding: 22px 0;
+}
+
+.category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.category-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    color: rgba(255, 255, 255, .85);
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.category-nav a:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #fff;
+}
+
+/* Story / Why DN Healthcare section */
+.story-section img.story-img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 20px 45px rgba(20, 35, 46, .18);
+}
+
+.story-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 28px;
+}
+
+.story-stats .stat-num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-family: 'Jost', sans-serif;
+}
+
+.story-stats .stat-label {
+    font-size: .85rem;
+    color: #6b7a83;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Trust badges strip */
+.trust-badge-img {
+    max-width: 100px;
+    transition: transform .3s ease;
+}
+
+.trust-badges .trust-badge-img:hover {
+    transform: translateY(-4px) scale(1.04);
+}
+
+@media (max-width: 767.98px) {
+    .trust-badge-img { max-width: 78px; }
+}
+.product-category-divider {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 30px 0;
+    padding-top: 40px;
+    border-top: 1px solid #e7ecef;
+}
+
+.product-category-divider:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.product-category-divider h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    color: var(--dark);
+    display: inline-block;
+    position: relative;
+}
+
+.product-category-divider span.tag {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 
 
@@ -516,9 +765,166 @@ h6,
 
 .product-card {
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease-in-out;
+  transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease;
 }
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 18px 30px rgba(20,35,46,.1);
+}
+
+.product-card .btn-success {
+    transition: transform .2s ease, background-color .25s ease;
+}
+.product-card .btn-success:hover {
+    transform: scale(1.05);
+}
+
+.carousel-item img {
+    transition: transform .6s ease;
+}
+
+a, .btn, .nav-link, .category-nav a {
+    transition: all .3s cubic-bezier(.22,1,.36,1);
+}
+
+.accordion-button {
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.wow {
+    visibility: visible !important;
+}
+
+
+/*** Join Our Journey ***/
+.journey-carousel .journey-item,
+#journeyGalleryGrid .journey-item {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    background: var(--light);
+    box-shadow: 0 6px 18px rgba(20, 35, 46, .08);
+}
+
+.journey-carousel .journey-item img,
+#journeyGalleryGrid .journey-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
+}
+
+.journey-carousel .journey-item:hover img,
+#journeyGalleryGrid .journey-item:hover img {
+    transform: scale(1.06);
+}
+
+.journey-item .journey-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #8A9A93;
+    background: repeating-linear-gradient(45deg, #F2F9F5, #F2F9F5 10px, #E7F1EA 10px, #E7F1EA 20px);
+    border: 2px dashed #C7D9CE;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px;
+}
+
+.journey-item .journey-placeholder i {
+    font-size: 26px;
+}
+
+.journey-carousel .owl-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.journey-carousel .owl-nav .owl-prev,
+.journey-carousel .owl-nav .owl-next {
+    margin: 0 12px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    border-radius: 60px;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.journey-carousel .owl-nav .owl-prev:hover,
+.journey-carousel .owl-nav .owl-next:hover {
+    background: linear-gradient(to bottom right, var(--secondary), var(--primary));
+}
+
+#journeyGalleryModal .modal-content {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+#journeyGalleryModal .modal-header {
+    background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    color: #FFFFFF;
+    border: none;
+}
+
+#journeyGalleryModal .modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.journey-contact-cta {
+    border-top: 1px solid #E7ECEA;
+}
+
+.journey-contact-cta .btn-whatsapp {
+    background: #25D366;
+    color: #FFFFFF;
+    border: none;
+}
+
+.journey-contact-cta .btn-whatsapp:hover {
+    background: #1DA851;
+    color: #FFFFFF;
+}
+
+.journey-videos-section {
+    border-top: 1px solid #E7ECEA;
+}
+
+.journey-video-card {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(20, 35, 46, .08);
+    background: #000;
+}
+
+.journey-video-card video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    display: block;
+    object-fit: cover;
+    background: #000;
+}
+
+.journey-video-card .journey-video-caption {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark);
+    text-align: center;
+    padding: 10px 6px;
+    background: #FFFFFF;
 }
 
