@@ -1,0 +1,10 @@
+Ye 17 photos "Join Our Journey" section me already lagi hui hain
+(js/journey.js file me list ki gayi hain).
+
+Aur photo add karni ho to:
+1) Naya image file isi folder (img/journey/) me daal do.
+2) js/journey.js file kholo, "journeyImages" list me ek naya line add karo:
+       { src: "img/journey/apna-naya-photo.jpg", caption: "Caption yahan likho" },
+
+Kisi photo ko hatana ho to us line ko journeyImages list se delete kar do.
+Order wahi rahega jo list me hai.
