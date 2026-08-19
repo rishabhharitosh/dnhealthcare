@@ -34,7 +34,6 @@
         { src: "img/journey/journey-14.webp", caption: "On the Ground" },
         { src: "img/journey/journey-15.webp", caption: "Celebrating Our Athletes" },
         { src: "img/journey/journey-16.webp", caption: "At the Fitness Expo" },
-        { src: "img/journey/journey-17.webp", caption: "Champion with DN Healthcare" }
     ];
 
     /* =====================================================================
